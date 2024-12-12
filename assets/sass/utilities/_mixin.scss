@@ -1,0 +1,30 @@
+@mixin font($size: null, $height: null, $spacing: null, $weight: null) {
+    @if $size {
+        font-size: calc($size / 16 * 1rem);
+    }
+    @if $height {
+        line-height: calc($height / $size);
+    }
+    @if $spacing {
+        letter-spacing: calc($spacing / 1000 * 1em);
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+}
+
+// ブレイクポイントの定義
+$breakpoints: (
+  'sm': '(min-width: 576px)',  // スマートフォン横向き
+  'md': '(min-width: 768px)',  // タブレット
+  'lg': '(min-width: 992px)',  // デスクトップ
+  'xl': '(min-width: 1200px)', // ワイドデスクトップ
+) !default;
+
+// メディアクエリmixin
+@mixin mq($breakpoint) {
+  @media screen and #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
