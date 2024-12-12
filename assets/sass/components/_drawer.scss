@@ -1,22 +1,32 @@
 
   //アイコン ====================
   .c-drawer__icon {
-    display: none;
+    display: flex;
     position: absolute;
     z-index: 1000;
-    top: 23px;
-    right: 20px;
-    width: 26px;
-    height: 19px;
+    top: 9px;
+    right: 22px;
+    width: 21px;
+    height: 33px;
     background: transparent;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     
-     @include mq(sm) {
-       display: flex;
+    @include mq(lg) {
+      display: none;
     }
     
   }
+
+  .c-drawer__icon--text {
+    font-size: 6px;
+    font-weight: 700;
+    line-height: 6px;
+    letter-spacing: 0.02em;
+    color: $primary-color;
+  }
+
 
   .c-drawer__icon.js-show {
     position: fixed;
@@ -26,8 +36,13 @@
   .c-drawer__icon--bar {
     width: 100%;
     height: 3px;
-    background: $font-color;
+    background: $primary-color;
     transition: all 0.5s ease;
+  }
+
+  .c-drawer__icon--bar:nth-of-type(3) {
+    width: 62.5%;
+
   }
   
   
@@ -35,19 +50,23 @@
   .c-drawer__icon.js-show {
 
     .c-drawer__icon--bar {
-      background: #FFF;
+      background: $primary-color;
     }
 
-    .c-drawer__icon--bar:nth-of-type(1) {
-      rotate: 45deg;
-      translate: 0 7.5px;
-    }
-    .c-drawer__icon--bar:nth-of-type(2) {
+    .c-drawer__icon--text:nth-of-type(1) {
       display: none;
     }
+
+    .c-drawer__icon--bar:nth-of-type(2) {
+      rotate: 45deg;
+      translate: 0 15px;
+    }
     .c-drawer__icon--bar:nth-of-type(3) {
+      display: none;
+    }
+    .c-drawer__icon--bar:nth-of-type(4) {
       rotate: -45deg;
-      translate: 0 -7.5px;
+      translate: 0 -15px;
     }
   }
   
@@ -55,12 +74,11 @@
   .c-drawer {
     position: fixed;
     z-index: 999;
-    top: 0;
+    top: 52px;
     right: 0;
-    width: 278px;
-    height: 100vh;
+    width: 100vw;
     height: 100svh;
-    background: $accent1-color;
+    background: $accent2-color;
     overflow-y: scroll;
     translate: 101%;
     transition: translate 0.5s ease;
@@ -79,27 +97,39 @@
     width: 100%;
     height: fit-content;
     padding-block: 88px 40px;
-    padding-left: 34px;
   }
   .c-drawer__list {
     display: flex;
+    width: 230px;
+    margin-inline: auto;
     flex-direction: column;
-    row-gap: 32px;
+    row-gap: 40px;
     margin-bottom: 40px;
-    li a {
-      color: #FFF;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: normal;
+
+    & li {
+      display: flex;
+      gap: 13px;
+    }
+
+    & li span {
+      width: 20px;
+      height: 20px;
+      border: 2px solid $primary-color;
+      rotate: 45deg;
+    }
+
+
+    & li a {
+      color: $font1-color;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.03em;
     }
   }
-  .c-drawer__btn {
-    display: inline-block;
-    padding: 6px 30px;
-    background: #fff;
-    border-radius: 100vmax;
-    color: $accent1-color;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: normal;
+
+  .c-drawer__cts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
   }
