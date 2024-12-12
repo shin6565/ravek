@@ -4,7 +4,7 @@
 body {
     font-size: 16px;
     font-weight: 400;
-    color: $font-color;
+    color: $font1-color;
     background: $primary-color;
     font-family: $font-family-en, $font-family-ja, serif;
 
@@ -17,7 +17,7 @@ img {
 
 
 a {
-    color: $font-color;
+    color: $font1-color;
     text-decoration: none;
 }
 
@@ -27,16 +27,16 @@ li {
 
 
 .is-pc {
-    display: block;
-    @include mq(sm) {
-      display: none;
+    display: none;
+    @include mq(lg) {
+      display: block;
     }
   }
   
   .is-sp {
-    display: none;
-    @include mq(sm) {
-      display: block;
+    display: block;
+    @include mq(lg) {
+      display: none;
     }
   }
 

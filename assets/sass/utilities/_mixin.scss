@@ -15,15 +15,14 @@
 
 // ブレイクポイントの定義
 $breakpoints: (
-  'sm': '(min-width: 576px)',  // スマートフォン横向き
-  'md': '(min-width: 768px)',  // タブレット
-  'lg': '(min-width: 992px)',  // デスクトップ
-  'xl': '(min-width: 1200px)', // ワイドデスクトップ
+  'sm': '(min-width: 768px)',  // スマートフォン横向き
+  'md': '(min-width: 992px)',  // タブレット
+  'lg': '(min-width: 1200px)',  // デスクトップ
 ) !default;
 
 // メディアクエリmixin
 @mixin mq($breakpoint) {
-  @media screen and #{map-get($breakpoints, $breakpoint)} {
+  @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
