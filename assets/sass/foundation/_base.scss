@@ -1,0 +1,49 @@
+/*===========================================================================
+# common - 全体に共通するスタイル
+===========================================================================*/
+body {
+    font-size: 16px;
+    font-weight: 400;
+    color: $font-color;
+    background: $primary-color;
+    font-family: $font-family-en, $font-family-ja, serif;
+
+}
+
+img {
+    width: 100%;
+}
+
+
+
+a {
+    color: $font-color;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.is-pc {
+    display: block;
+    @include mq(sm) {
+      display: none;
+    }
+  }
+  
+  .is-sp {
+    display: none;
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
+
+/*
+* {
+	outline: 1px solid magenta;
+}
+
+*/

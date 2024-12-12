@@ -1,0 +1,105 @@
+
+  //アイコン ====================
+  .c-drawer__icon {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 23px;
+    right: 20px;
+    width: 26px;
+    height: 19px;
+    background: transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    
+     @include mq(sm) {
+       display: flex;
+    }
+    
+  }
+
+  .c-drawer__icon.js-show {
+    position: fixed;
+  }
+
+
+  .c-drawer__icon--bar {
+    width: 100%;
+    height: 3px;
+    background: $font-color;
+    transition: all 0.5s ease;
+  }
+  
+  
+  //メニューが開いている時 ========
+  .c-drawer__icon.js-show {
+
+    .c-drawer__icon--bar {
+      background: #FFF;
+    }
+
+    .c-drawer__icon--bar:nth-of-type(1) {
+      rotate: 45deg;
+      translate: 0 7.5px;
+    }
+    .c-drawer__icon--bar:nth-of-type(2) {
+      display: none;
+    }
+    .c-drawer__icon--bar:nth-of-type(3) {
+      rotate: -45deg;
+      translate: 0 -7.5px;
+    }
+  }
+  
+  //ドロワーメニュー
+  .c-drawer {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 278px;
+    height: 100vh;
+    height: 100svh;
+    background: $accent1-color;
+    overflow-y: scroll;
+    translate: 101%;
+    transition: translate 0.5s ease;
+
+    &.js-show {
+      translate: 0;
+    }
+
+
+  }
+
+
+
+
+  .c-drawer__body {
+    width: 100%;
+    height: fit-content;
+    padding-block: 88px 40px;
+    padding-left: 34px;
+  }
+  .c-drawer__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    margin-bottom: 40px;
+    li a {
+      color: #FFF;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .c-drawer__btn {
+    display: inline-block;
+    padding: 6px 30px;
+    background: #fff;
+    border-radius: 100vmax;
+    color: $accent1-color;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+  }

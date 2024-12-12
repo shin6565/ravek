@@ -1,0 +1,72 @@
+.c-contact__button {
+    position: relative;
+    max-width: 337px;
+    width: 100%;
+    background: $accent1-color;
+    border: 1px solid $accent1-color;
+    box-shadow: 1.88px 1.88px 2.82px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    z-index: 600;
+
+     @include mq(sm) {
+    }
+
+    @media(any-hover: hover) {
+        &:hover {
+            background: #fff;
+            .c-contact__button__link {
+                color: $accent1-color;
+            }
+        }
+        &:hover .c-contact__button__link::before {
+            border-top: 2px solid $accent1-color;
+            border-right: 2px solid $accent1-color;
+        }
+    }
+}
+
+.c-contact__button__link {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28.96px;
+    letter-spacing: 0.1em;
+    padding-block: 10px;
+    padding-inline-start: 45px;
+    padding-inline-end: 65px;
+
+    @media screen and (max-width: 879px) {
+        font-size: 16px;
+        padding-inline-start: 25px;
+        padding-inline-end: 45px;
+    }
+
+    @media screen and (max-width: 800px) {
+        padding-inline-start: 15px;
+        padding-inline-end: 40px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        translate: 0 -50%;
+        width: 13px;
+        height: 13px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        rotate: 45deg;
+        transition: all 0.4s ease;
+
+        @media screen and (max-width: 879px) {
+            width: 10px;
+            height: 10px;
+            right: 10%;
+        }
+
+    }
+    
+}
