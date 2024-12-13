@@ -1,24 +1,44 @@
 .c-btn {
-    display: inline-block;
+    display: grid;
     max-width: 300px;
     width: 100%;
     height: 58px;
+    margin-inline: auto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    place-items: center;
     color: $sub2-color;
     background: $primary-color;
-    border: 1px solid $primary-color;
+    border: 2px solid $sub2-color;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.24);
     border-radius: 29px;
     transition: all 0.4s ease;
 
-     @include mq(sm) {
+    &.__w {
+        background: $sub2-color;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+
+        @media(any-hover: hover) {
+            &:hover {
+                background: $primary-color;
+                color: $sub2-color;
+                border: 2px solid $sub2-color;
+            }
+        }
+    }
+
+
+
+     @include mq(lg) {
     }
 
     @media(any-hover: hover) {
         &:hover {
             background: #fff;
-            .c-contact__button__link {
-                color: $accent1-color;
-            }
+            color: $primary-color;
+
         }
         &:hover .c-contact__button__link::before {
             border-top: 2px solid $accent1-color;

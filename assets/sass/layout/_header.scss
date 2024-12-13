@@ -1,6 +1,10 @@
 .l-header {
     height: 52px;
     background: $sub2-color;
+
+     @include mq(lg) {
+        height: 72px;
+    }
 }
 
 .l-header__inner {
@@ -14,18 +18,75 @@
     display: block;
     width: 71px;
     height: 24px;
+
+     @include mq(lg) {
+        width: 83px;
+        height: 28px;
+    }
 }
 
 .l-header__nav {
+    display: none;
 
+     @include mq(lg) {
+         display: flex;
+         gap: 14px;
+         max-width: 600px;
+    }
 }
 
 
 .l-header__list {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    white-space: nowrap;
+    
+    
+    & a {
+        position: relative;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px;
+        letter-spacing: 0.03em;
+        
+        &::after {
+            content: '';
+            scale: 0;
+            position: absolute;
+            bottom: -8px;
+            right: 50%;
+            width: 47.61%;
+            height: 1.35px;
+            translate: 50% 0;
+            background: $primary-color;
+            transition: scale 0.4s ease;
+        }
 
+        @media(any-hover: hover) {
+            &:hover::after{
+                scale: 1;
+            }
+        }
+    }
 }
 
 .l-header__btn {
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    border: none;
+    margin-inline: 0;
+
+    @media(any-hover: hover) {
+        &:hover {
+            background: $primary-color;
+            color: $sub2-color;
+            translate: -2px -2px;
+        }
+    }
 
 }
 
