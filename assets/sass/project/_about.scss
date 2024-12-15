@@ -1,5 +1,11 @@
 .p-about {
+    padding-block-start: 80px;
+    padding-block-end: 60px;
 
+     @include mq(lg) {
+        padding-block-start: 100px;
+        padding-block-end: 100px;
+    }
 }
 
 
@@ -8,15 +14,32 @@
 }
 
 .p-about__text {
+    margin-block-start: 24px;
+    line-height: 25.6px;
+    text-align: center;
+
+     @include mq(lg) {
+    font-size: 18px;
+    line-height: 32.4px;
+
+    }
+
+    & span {
+        font-weight: 700;
+    }
+
 
 }
 
-.c-btn {
 
-}
 
 .p-about__btn {
+    margin-block-start: 24px;
+    border: none;
 
+     @include mq(lg) {
+        margin-block-start: 40px;
+    }
 }
 
 .__p {

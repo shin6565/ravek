@@ -1,8 +1,36 @@
-.l-title__sub {
-
+.l-section__title {
+    text-align: center;
 }
 
-.l-title {
+.l-section__title-en {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    color: $accent1-color;
 
+     @include mq(lg) {
+    font-size: 36px;
+    line-height: 47.84px;
+    }
 }
+
+.l-section__title-ja {
+    margin-block-start: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    color: $primary-color;
+
+     @include mq(lg) {
+    font-size: 18px;
+    line-height: 32.4px;
+
+
+    }
+}
+
+
+
+
 
