@@ -18,8 +18,10 @@
 
 .p-feature__container {
     margin-block-start: -25px;
-
-     @include mq(lg) {
+    
+    @include mq(lg) {
+        display: flex;
+        flex-direction: column;
         margin-block-start: 0;
     }
 }
@@ -52,8 +54,16 @@
         width: 100%;
         padding-inline: 0;
         translate: -68px 0;
-
     }
+
+    &.-reverse {
+
+         @include mq(lg) {
+            translate: 68px 0;
+        }
+    }
+
+
 }
 
 .p-feature__body {
@@ -67,8 +77,13 @@
         max-width: calc( 742 / 1235 * 100%);
         height: calc( 336 / 490 * 100%);
         align-self: end;
+    }
 
+    &.-reverse {
 
+         @include mq(lg) {
+            align-self: start;
+        }
     }
 }
 
