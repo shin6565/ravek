@@ -104,7 +104,6 @@
     margin-inline: auto;
     flex-direction: column;
     row-gap: 40px;
-    margin-bottom: 40px;
 
     & li {
       display: flex;
@@ -125,11 +124,16 @@
       font-weight: 700;
       line-height: 24px;
       letter-spacing: 0.03em;
+
+
+
     }
   }
 
-  .c-drawer__cts {
+  .c-drawer__cta {
     display: flex;
+    margin-block-start: 62px;
     flex-direction: column;
     row-gap: 32px;
+    text-align: center;
   }

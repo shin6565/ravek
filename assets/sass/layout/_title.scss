@@ -1,67 +1,36 @@
-.c-section__title {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    margin-block-end: 60px;
-    padding-block-end: 20px;
-
-     @include mq(sm) {
-        margin-block: 0;
-    }
-
+.l-section__title {
+    text-align: center;
 }
 
-.c-section__title-en {
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 46.88px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+.l-section__title-en {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
     color: $accent1-color;
 
-     @include mq(sm) {
-        font-size: 24px;
-        line-height: 28.13px;
-        font-family: Roboto;
-        letter-spacing: 0.5em;
+     @include mq(lg) {
+    font-size: 36px;
+    line-height: 47.84px;
     }
 }
 
-.c-section__title-jp {
-    line-height: 23.17px;
-    letter-spacing: 0.02em;
-    color: $accent1-color;
-}
+.l-section__title-ja {
+    margin-block-start: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    color: $primary-color;
+
+     @include mq(lg) {
+    font-size: 18px;
+    line-height: 32.4px;
 
 
-.c-fv__title {
-    display: flex;
-    flex-direction: column;
-    margin-block: auto;
-}
-
-.p-fv__title-en {
-    font-size: 64px;
-    line-height: 60px;
-    letter-spacing: 0.1em;
-    color: #fff;
-
-     @include mq(sm) {
-        font-size: 40px;
-        line-height: 40px;
     }
 }
 
-.p-fv__title-jp {
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    color: #fff;
-    text-align: right;
 
-     @include mq(sm) {
-        font-size: 16px;
-        line-height: 16px;
-    }
-}
+
+
 
