@@ -1,0 +1,36 @@
+.p-users {
+    padding-block-start: 60px;
+    padding-block-end: 60px;
+
+     @include mq(lg) {
+        padding-block-start: 100px;
+        padding-block-end: 100px;
+    }
+}
+
+.p-users__inner {
+
+}
+
+
+.p-users__container {
+    margin-block-start: 24px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 11px;
+    row-gap: 12px;
+
+
+}
+
+.p-users__item {
+
+
+    & img {
+        height: auto;
+        aspect-ratio: 213 / 169;
+    }
+}
+
