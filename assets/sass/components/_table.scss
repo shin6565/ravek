@@ -1,0 +1,68 @@
+.c-table {
+    // 固定値を指定
+    width: 1000px;
+  }
+
+.c-table__row {
+    display: grid;
+    grid-template-columns: 187px repeat(3, 180px);
+
+     @include mq(lg) {
+        grid-template-columns: 240px repeat(3, 260px);
+    }
+
+}
+
+.c-table__head {
+    padding-block-start: 47px;
+    padding-block-end: 41px;
+    background: $sub1-color;
+    color: $font2-color;
+
+    &.-blank {
+        background: $sub2-color;
+    }
+
+    &.-main {
+        background: $primary-color;
+
+    }
+
+}
+
+.c-table__head-title {
+
+}
+
+.c-table__head-price {
+
+}
+
+.c-btn {
+
+}
+
+.c-cta__btn {
+
+}
+
+.__w {
+
+}
+
+.-main {
+
+}
+
+.__p {
+
+}
+
+.c-table__side-head {
+
+}
+
+.c-table__data {
+
+}
+

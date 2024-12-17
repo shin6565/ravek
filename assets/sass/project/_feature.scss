@@ -22,7 +22,7 @@
     @include mq(lg) {
         display: flex;
         flex-direction: column;
-        margin-block-start: 0;
+        margin-block-start: 100px;
     }
 }
 
@@ -35,7 +35,12 @@
         justify-content: space-between;
 
         &:nth-of-type(even) {
+            margin-block-start: 153px;
             flex-direction: row;
+        }
+
+        &:nth-of-type(3) {
+            margin-block-start: -80px;
         }
 
     }

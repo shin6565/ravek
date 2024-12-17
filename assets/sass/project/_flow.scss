@@ -1,0 +1,94 @@
+.p-flow {
+    background: $accent3-color;
+    padding-block-start: 60px;
+    padding-block-end: 60px;
+
+     @include mq(lg) {
+        padding-block-start: 100px;
+        padding-block-end: 80px;
+    }
+}
+
+.p-flow__inner {
+
+}
+
+.p-flow__container {
+    display: flex;
+    margin-block-start: 40px;
+    flex-direction: column;
+    row-gap: 60px;
+
+     @include mq(lg) {
+        margin-block-start: 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 98px;
+        row-gap: 0;
+    }
+
+}
+
+.p-flow__item {
+    position: relative;
+
+     @include mq(lg) {
+        flex: 1 1 0%;
+    }
+
+}
+
+.p-flow__number {
+    position: absolute;
+    top: -29px;
+    left: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 47.74px;
+    color: $primary-color;
+
+     @include mq(lg) {
+        top: -19px;
+        left: -12px;
+
+    }
+    }
+
+.p-flow__img {
+    display: grid;
+    padding-block-start: 20px;
+    padding-block-end: 20px;
+    place-items: center;
+    background: $accent2-color;
+    border-radius: 30px;
+
+    & img {
+        width: calc(199 / 280 * 100%);
+        height: auto;
+    }
+}
+
+.p-flow__title {
+    margin-block-start: 16px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+
+        @include mq(lg) {
+            font-size: 24px;
+            line-height: 34.75px;
+            
+        }
+
+}
+
+.p-flow__text {
+    margin-block-start: 8px;
+    line-height: 28.8px;
+    text-align: left;
+
+
+
+}
+
