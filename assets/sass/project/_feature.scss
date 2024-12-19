@@ -1,6 +1,5 @@
 .p-feature {
-    padding-block-start: 60px;
-    padding-block-end: 60px;
+    padding-block: rem(60);
     background: $accent3-color;
 }
 
@@ -17,12 +16,12 @@
 
 
 .p-feature__container {
-    margin-block-start: -25px;
+    margin-block-start: cal-clamp(-25, 100);
+
     
     @include mq(lg) {
         display: flex;
         flex-direction: column;
-        margin-block-start: 100px;
     }
 }
 
@@ -35,19 +34,19 @@
         justify-content: space-between;
 
         &:nth-of-type(even) {
-            margin-block-start: 153px;
+            margin-block-start: rem(153);
             flex-direction: row;
         }
 
         &:nth-of-type(3) {
-            margin-block-start: -80px;
+            margin-block-start: rem(-80);
         }
 
     }
 }
 
 .p-feature__img {
-    padding-inline: 47px;
+    padding-inline: cal-clamp(47, 0);
     translate: 0 75px;
 
     & img {
@@ -57,7 +56,6 @@
      @include mq(lg) {
         max-width: 520px;
         width: 100%;
-        padding-inline: 0;
         translate: -68px 0;
     }
 
@@ -73,9 +71,9 @@
 
 .p-feature__body {
     background: $sub2-color;
-    padding-block-start: 49px;
-    padding-block-end: 40px;
-    padding-inline: 20px;
+    padding-block-start: rem(49);
+    padding-block-end: rem(40);
+    padding-inline: rem(20);
     border-radius: 16px;
 
      @include mq(lg) {
@@ -95,46 +93,38 @@
 .p-feature__titleWrap {
     display: flex;
     flex-direction: column;
+    padding-inline-start: cal-clamp(0, 20);
 
      @include mq(lg) {
         flex-direction: row;
         justify-content: left;
         column-gap: 18px;
-        padding-inline-start: 20px;
     }
 }
 
 .p-feature__number {
-    font-size: 42px;
+    font-size: cal-clamp(42, 72);
     font-weight: 700;
-    line-height: 42px;
+    line-height: cal-clamp(42, 95.69);
     color: $primary-color;
-
-     @include mq(lg) {
-    font-size: 72px;
-    line-height: 95.69px;
-    }
-
 
 }
 
 .p-feature__title {
-    font-size: 22px;
+    font-size: rem(22);
     font-weight: 700;
-    line-height: 31.86px;
+    line-height: rem(31.86);
 
 
 }
 
 .p-feature__text {
-    font-size: 14px;
-    line-height: 22.4px;
+    font-size: rem(14);
+    line-height: rem(22.4);
+    margin-block-start: cal-clamp(0, 17);
+    padding-inline-start: cal-clamp(0, 87);
+    padding-inline-end: cal-clamp(0, 104);
 
-     @include mq(lg) {
-        margin-block-start: 17px;
-        padding-inline-start: 87px;
-        padding-inline-end: 104px;
-    }
 }
 
 

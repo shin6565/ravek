@@ -1,18 +1,13 @@
 .p-price {
-    padding-block-start: 60px;
-    padding-block-end: 60px;
-
-     @include mq(lg) {
-        padding-block-start: 100px;
-        padding-block-end: 100px;
-    }
+    padding-block-start: cal-clamp(60, 100);
+    padding-block-end: cal-clamp(60, 100);
 }
 
 
 
 .p-price__container {
     width: 100%;
-    margin-block-start: 40px;
+    margin-block-start: cal-clamp(40, 68);
     margin-inline: auto;
     padding-block-end: 30px;
     justify-content: center;
@@ -33,9 +28,7 @@
       background-color: #0500E3; // アクティブな箇所の色
     }
 
-     @include mq(lg) {
-         margin-block-start: 68px;
-    }
+
 }
 
   
