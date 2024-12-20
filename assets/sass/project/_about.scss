@@ -1,11 +1,6 @@
 .p-about {
-    padding-block-start: 80px;
-    padding-block-end: 60px;
-
-     @include mq(lg) {
-        padding-block-start: 100px;
-        padding-block-end: 100px;
-    }
+    padding-block-start: cal-clamp(80, 100);
+    padding-block-end: cal-clamp(60, 100);
 }
 
 
@@ -14,32 +9,22 @@
 }
 
 .p-about__text {
-    margin-block-start: 24px;
-    line-height: 25.6px;
+    margin-block-start: rem(24);
     text-align: center;
-
-     @include mq(lg) {
-    font-size: 18px;
-    line-height: 32.4px;
-
-    }
-
+    font-size: cal-clamp(16, 18);
+    line-height: cal-clamp(25.6, 32.4);
+    
     & span {
         font-weight: 700;
     }
-
-
 }
 
 
 
 .p-about__btn {
-    margin-block-start: 24px;
+    margin-block-start: cal-clamp(24, 40);
     border: none;
 
-     @include mq(lg) {
-        margin-block-start: 40px;
-    }
 }
 
 .__p {

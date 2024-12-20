@@ -3,34 +3,18 @@
 }
 
 .l-section__title-en {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 22px;
     color: $accent1-color;
+    font-size: cal-clamp(22, 36);
+    font-weight: 700;
+    line-height: cal-clamp(22, 47.84);
 
-     @include mq(lg) {
-    font-size: 36px;
-    line-height: 47.84px;
-    }
 }
 
 .l-section__title-ja {
-    margin-block-start: 12px;
-    font-size: 30px;
+    margin-block-start: rem(12);
+    font-size: cal-clamp(30, 48);
     font-weight: 700;
-    line-height: 42px;
+    line-height: cal-clamp(42, 48);
     letter-spacing: 0.05em;
     color: $primary-color;
-
-     @include mq(lg) {
-    font-size: 18px;
-    line-height: 32.4px;
-
-
-    }
 }
-
-
-
-
-

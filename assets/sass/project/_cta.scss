@@ -1,0 +1,26 @@
+.p-cta {
+    background: $font1-color;
+
+}
+
+
+.p-cta__inner {
+    text-align: center;
+    padding-block: rem(40);
+}
+
+.p-cta__title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: $font2-color;
+    font-size: cal-clamp(18, 36);
+    line-height: cal-clamp(28.8, 52.13);
+
+}
+
+
+.p-cta__btn {
+    margin-block-start: rem(24);
+    border: none;
+
+}

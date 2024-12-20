@@ -20,9 +20,9 @@
   }
 
   .c-drawer__icon--text {
-    font-size: 6px;
+    font-size: rem(6);
     font-weight: 700;
-    line-height: 6px;
+    line-height: rem(6);;
     letter-spacing: 0.02em;
     color: $primary-color;
   }
@@ -96,7 +96,8 @@
   .c-drawer__body {
     width: 100%;
     height: fit-content;
-    padding-block: 88px 40px;
+    padding-block-start: rem(88);
+    padding-block-end: rem(40);
   }
   .c-drawer__list {
     display: flex;
@@ -120,9 +121,9 @@
 
     & li a {
       color: $font1-color;
-      font-size: 24px;
+      font-size: rem(24);
       font-weight: 700;
-      line-height: 24px;
+      line-height: rem(24);
       letter-spacing: 0.03em;
 
 
@@ -132,7 +133,7 @@
 
   .c-drawer__cta {
     display: flex;
-    margin-block-start: 62px;
+    margin-block-start: rem(62);
     flex-direction: column;
     row-gap: 32px;
     text-align: center;
