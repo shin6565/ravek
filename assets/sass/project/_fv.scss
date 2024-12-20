@@ -1,15 +1,14 @@
 .p-fv {
     background: $accent2-color;
-    padding-block-end: 60px;
+    padding-block-end: rem(60);
 }
 
 
 .p-fv__inner {
-    padding-block-start: 60px;
+    padding-block-start: cal-clamp(60, 33);
 
      @include mq(lg) {
         display: flex;
-        padding-block-start: 33px;
         justify-content: space-between;
     }
 }
@@ -19,26 +18,15 @@
 }
 
 .p-fv__title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 48px;
-    
-     @include mq(lg) {
-        margin-block-start: 84px;
-        font-size: 60px;
-        font-weight: 700;
-        line-height: 86.88px;
-    }
+    font-size: cal-clamp(30, 60);
+    margin-block-start: cal-clamp(0, 84);
+    line-height: cal-clamp(48, 86.88);
 }
 
 .p-fv__text {
-    margin-block-start: 16px;
-    line-height: 25.6px;
-
-     @include mq(lg) {
-        font-size: 18px;
-        line-height: 32.4px;
-    }
+    margin-block-start: rem(16);
+    line-height: cal-clamp(25.6, 32.4);
+    font-size: cal-clamp(16, 18);
 
 }
 
@@ -54,9 +42,9 @@
     flex-direction: column;
     row-gap: 32px;
     text-align: center;
+    margin-block-start: cal-clamp(0, 33);
 
      @include mq(lg) {
-        margin-block-start: 33px;
         flex-direction: row;
         gap: 37px;
     }

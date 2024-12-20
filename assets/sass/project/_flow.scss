@@ -1,12 +1,7 @@
 .p-flow {
     background: $accent3-color;
-    padding-block-start: 60px;
-    padding-block-end: 60px;
-
-     @include mq(lg) {
-        padding-block-start: 100px;
-        padding-block-end: 80px;
-    }
+    padding-block-start: cal-clamp(60, 100);
+    padding-block-end: cal-clamp(60, 80);
 }
 
 .p-flow__inner {
@@ -15,12 +10,11 @@
 
 .p-flow__container {
     display: flex;
-    margin-block-start: 40px;
+    margin-block-start: rem(40);
     flex-direction: column;
     row-gap: 60px;
 
      @include mq(lg) {
-        margin-block-start: 40px;
         flex-direction: row;
         justify-content: space-between;
         column-gap: 98px;
@@ -42,9 +36,9 @@
     position: absolute;
     top: -29px;
     left: 0;
-    font-size: 48px;
+    font-size: rem(48);
     font-weight: 700;
-    line-height: 47.74px;
+    line-height: rem(48);
     color: $primary-color;
 
      @include mq(lg) {
@@ -56,8 +50,8 @@
 
 .p-flow__img {
     display: grid;
-    padding-block-start: 20px;
-    padding-block-end: 20px;
+    padding-block-start: rem(20);
+    padding-block-end: rem(20);
     place-items: center;
     background: $accent2-color;
     border-radius: 30px;
@@ -69,26 +63,18 @@
 }
 
 .p-flow__title {
-    margin-block-start: 16px;
-    font-size: 20px;
+    margin-block-start: rem(16);
+    font-size: cal-clamp(20, 24);
     font-weight: 700;
-    line-height: 20px;
+    line-height: cal-clamp(20, 34.75);
     text-align: center;
-
-        @include mq(lg) {
-            font-size: 24px;
-            line-height: 34.75px;
-            
-        }
 
 }
 
 .p-flow__text {
-    margin-block-start: 8px;
-    line-height: 28.8px;
+    margin-block-start: rem(8);
+    line-height: rem(28.8);
     text-align: left;
-
-
 
 }
 

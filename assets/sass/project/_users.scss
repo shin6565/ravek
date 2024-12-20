@@ -1,11 +1,6 @@
 .p-users {
-    padding-block-start: 60px;
-    padding-block-end: 60px;
-
-     @include mq(lg) {
-        padding-block-start: 100px;
-        padding-block-end: 100px;
-    }
+    padding-block-start: cal-clamp(60, 100);
+    padding-block-end: cal-clamp(60, 100);
 }
 
 .p-users__inner {
@@ -14,7 +9,7 @@
 
 
 .p-users__container {
-    margin-block-start: 24px;
+    margin-block-start: rem(24);
     margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

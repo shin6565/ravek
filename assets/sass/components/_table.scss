@@ -13,9 +13,20 @@
 
 }
 
+.c-table__space {
+    height: 12px;
+    
+    
+    &.-main {
+        height: 16px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.6);
+        background: $primary-color;
+    }
+}
+
 .c-table__head {
-    padding-block-start: 47px;
-    padding-block-end: 41px;
+    padding-block-start: rem(47);
+    padding-block-end: rem(41);
     background: $sub1-color;
     color: $font2-color;
 

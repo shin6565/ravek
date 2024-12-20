@@ -6,29 +6,21 @@
 
 .p-cta__inner {
     text-align: center;
-    padding-block-start: 40px;
-    padding-block-end: 40px;
+    padding-block: rem(40);
 }
 
 .p-cta__title {
-    font-size: 18px;
     font-weight: 700;
-    line-height: 28.8px;
     letter-spacing: 0.02em;
     color: $font2-color;
-
-     @include mq(lg) {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 52.13px;
-    letter-spacing: 0.02em;
-    }
+    font-size: cal-clamp(18, 36);
+    line-height: cal-clamp(28.8, 52.13);
 
 }
 
 
 .p-cta__btn {
-    margin-block-start: 24px;
+    margin-block-start: rem(24);
     border: none;
 
 }
