@@ -15,8 +15,8 @@
 
 // ブレイクポイントの定義
 $breakpoints: (
-  'sm': '(min-width: 768px)',  // スマートフォン横向き
-  'md': '(min-width: 992px)',  // タブレット
+  'sm': '(max-width: 767px)',  // スマートフォン横向き
+  'md': '(min-width: 768px)',  // タブレット
   'lg': '(min-width: 1200px)',  // デスクトップ
 ) !default;
 
@@ -33,7 +33,7 @@ $baseFontSize: 16;
 
 // pxをremに変換する関数
 @function rem($pxValue) {
-  @return ($pxValue / $baseFontSize) * 1rem;
+  @return calc($pxValue / $baseFontSize) * 1rem;
 }
 
 // // 使用例

@@ -31,7 +31,7 @@
      @include mq(lg) {
          display: flex;
          gap: 14px;
-         max-width: 600px;
+         max-width: 610px;
     }
 }
 
@@ -72,8 +72,10 @@
 }
 
 .l-header__btn {
-    width: 180px;
-    height: 40px;
+    padding-block: rem(12);
+    padding-inline: rem(26);
+    font-size: rem(16);
+    line-height: rem(16);
     font-weight: 700;
     border: none;
     margin-inline: 0;
