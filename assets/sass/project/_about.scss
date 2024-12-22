@@ -5,12 +5,11 @@
 
 
 .p-about__inner {
-
+    text-align: center;
 }
 
 .p-about__text {
     margin-block-start: rem(24);
-    text-align: center;
     font-size: cal-clamp(16, 18);
     line-height: cal-clamp(25.6, 32.4);
     
@@ -19,15 +18,18 @@
     }
 }
 
+.p-about__footer {
+    margin-block-start: cal-clamp(24, 40);
+}
+
 
 
 .p-about__btn {
-    margin-block-start: cal-clamp(24, 40);
+    padding-inline: cal-clamp(42, 56);
+    font-size: cal-clamp(18, 24);
+    border-radius: 50px;
     border: none;
 
 }
 
-.__p {
-
-}
 
