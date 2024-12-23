@@ -7,7 +7,7 @@
 .p-fv__inner {
     padding-block-start: cal-clamp(60, 33);
 
-     @include mq(lg) {
+     @include mq(md) {
         display: flex;
         justify-content: space-between;
     }
@@ -44,18 +44,17 @@
     text-align: center;
     margin-block-start: cal-clamp(0, 33);
 
-     @include mq(lg) {
+     @include mq(md) {
         flex-direction: row;
         gap: 37px;
     }
 }
 
 .c-btn.p-fv__btn {
-    max-width: 250px;
-    height: 54px;
+    padding-inline: rem(51);
     border: none;
 
-     @include mq(lg) {
+     @include mq(md) {
         margin-inline: 0;
     }
 }

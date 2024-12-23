@@ -8,7 +8,7 @@
 .p-feature__inner {
     padding-inline: 0;
     
-    @include mq(lg) {
+    @include mq(md) {
          max-width: calc(1235 / 1440 * 100%);
     }
 }
@@ -19,7 +19,7 @@
     margin-block-start: cal-clamp(-25, 100);
 
     
-    @include mq(lg) {
+    @include mq(md) {
         display: flex;
         flex-direction: column;
     }
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
 
-     @include mq(lg) {
+     @include mq(md) {
         flex-direction: row-reverse;
         justify-content: space-between;
 
@@ -53,7 +53,7 @@
         height: auto;
     }
 
-     @include mq(lg) {
+     @include mq(md) {
         max-width: 520px;
         width: 100%;
         translate: -68px 0;
@@ -61,7 +61,7 @@
 
     &.-reverse {
 
-         @include mq(lg) {
+         @include mq(md) {
             translate: 68px 0;
         }
     }
@@ -76,7 +76,7 @@
     padding-inline: rem(20);
     border-radius: 16px;
 
-     @include mq(lg) {
+     @include mq(md) {
         max-width: calc( 742 / 1235 * 100%);
         height: calc( 336 / 490 * 100%);
         align-self: end;
@@ -84,7 +84,7 @@
 
     &.-reverse {
 
-         @include mq(lg) {
+         @include mq(md) {
             align-self: start;
         }
     }
@@ -95,7 +95,7 @@
     flex-direction: column;
     padding-inline-start: cal-clamp(0, 20);
 
-     @include mq(lg) {
+     @include mq(md) {
         flex-direction: row;
         justify-content: left;
         column-gap: 18px;

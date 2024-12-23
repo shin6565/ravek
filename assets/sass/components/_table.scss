@@ -1,79 +1,74 @@
 .c-table {
-    // 固定値を指定
-    width: 1000px;
+  width: 727.6px;
+  margin-inline: auto;
+  border-spacing: 0;
+
+   @include mq(md) {
+     width: 1020px;
+  }
   }
 
 .c-table__row {
     display: grid;
-    grid-template-columns: 187px repeat(3, 180px);
+    grid-template-columns: 176px repeat(3, 183.2px);
+    place-items: center;
 
-     @include mq(lg) {
+     @include mq(md) {
         grid-template-columns: 240px repeat(3, 260px);
     }
 
-}
-
-.c-table__space {
-    height: 12px;
-    
-    
-    &.-main {
-        height: 16px;
-        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.6);
-        background: $primary-color;
+    &:nth-child(odd) {
+        background: $accent2-color;
     }
-}
-
-.c-table__head {
-    padding-block-start: rem(47);
-    padding-block-end: rem(41);
-    background: $sub1-color;
-    color: $font2-color;
-
-    &.-blank {
+    &:nth-child(even) {
         background: $sub2-color;
     }
 
-    &.-main {
-        background: $primary-color;
-
-    }
-
+  }
+  
+  .c-table__side-head, .c-table__data {
+    padding-block: rem(19);
 }
 
-.c-table__head-title {
 
-}
 
-.c-table__head-price {
-
-}
-
-.c-btn {
-
-}
-
-.c-cta__btn {
-
-}
-
-.__w {
-
-}
-
-.-main {
-
-}
-
-.__p {
-
-}
 
 .c-table__side-head {
+  font-size: rem(14);
+  line-height: rem(14);
+
+  @include mq(md) {
+    font-size: rem(22);
+    line-height: rem(22);
+  }
 
 }
 
 .c-table__data {
+  font-size: rem(14);
+  line-height: rem(14);
+
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: rem(18);
+  }
+
+  &.-main {
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: rem(18);
+  
+    @include mq(md) {
+      font-size: rem(24);
+      line-height: rem(18);
+    }
+  
+  }
 
 }
+
+
+
+
+
 

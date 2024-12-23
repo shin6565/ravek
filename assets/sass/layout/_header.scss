@@ -2,7 +2,7 @@
     height: 52px;
     background: $sub2-color;
 
-     @include mq(lg) {
+     @include mq(md) {
         height: 72px;
     }
 }
@@ -19,7 +19,7 @@
     width: 71px;
     height: 24px;
 
-     @include mq(lg) {
+     @include mq(md) {
         width: 83px;
         height: 28px;
     }
@@ -28,10 +28,10 @@
 .l-header__nav {
     display: none;
 
-     @include mq(lg) {
+     @include mq(md) {
          display: flex;
          gap: 14px;
-         max-width: 600px;
+         max-width: 610px;
     }
 }
 
@@ -72,8 +72,10 @@
 }
 
 .l-header__btn {
-    width: 180px;
-    height: 40px;
+    padding-block: rem(12);
+    padding-inline: rem(26);
+    font-size: rem(16);
+    line-height: rem(16);
     font-weight: 700;
     border: none;
     margin-inline: 0;

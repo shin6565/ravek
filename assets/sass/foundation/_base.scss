@@ -28,14 +28,14 @@ li {
 
 .is-pc {
     display: none;
-    @include mq(lg) {
+    @include mq(md) {
       display: block;
     }
   }
   
   .is-sp {
     display: block;
-    @include mq(lg) {
+    @include mq(md) {
       display: none;
     }
   }
