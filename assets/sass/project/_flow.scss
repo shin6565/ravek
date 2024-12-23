@@ -14,7 +14,7 @@
     flex-direction: column;
     row-gap: 60px;
 
-     @include mq(lg) {
+     @include mq(md) {
         flex-direction: row;
         justify-content: space-between;
         column-gap: 98px;
@@ -26,7 +26,7 @@
 .p-flow__item {
     position: relative;
 
-     @include mq(lg) {
+     @include mq(md) {
         flex: 1 1 0%;
     }
 
@@ -41,7 +41,7 @@
     line-height: rem(48);
     color: $primary-color;
 
-     @include mq(lg) {
+     @include mq(md) {
         top: -19px;
         left: -12px;
 
