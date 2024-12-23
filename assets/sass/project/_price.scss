@@ -17,11 +17,11 @@
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #E2E2E2; // 背景色
+    background-color: $accent3-color; // 背景色
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #0500E3; // アクティブな箇所の色
+    background-color: $primary-color ; // アクティブな箇所の色
   }
 
 
@@ -34,18 +34,24 @@
   margin-block-start: cal-clamp(40, 68);
   margin-inline: auto;
   width: 727px;
-  @include mq(lg) {
+  @include mq(md) {
     width: 1020px;
  }
 }
 
 .p-price__head-item {
-  padding-block-start: rem(47);
-  padding-block-end: rem(41);
-  padding-inline: rem(13);
+  padding-block-start: rem(28);
+  padding-block-end: rem(28);
+  padding-inline: rem(7);
   background: $font1-color;
   color: $font2-color;
   text-align: center;
+
+   @include mq(md) {
+    padding-block-start: rem(47);
+    padding-block-end: rem(41);
+    padding-inline: rem(13);
+  }
 
 
   &.-main {
@@ -56,40 +62,70 @@
 }
 
 .p-price__head-title {
-    font-size: cal-clamp(20, 24);
-    line-height: cal-clamp(28.6, 34.75);
+    font-size: rem(20);
+    line-height: rem(28.6);
     font-weight: 700;
     color: $font2-color;
 
+     @include mq(md) {
+      font-size: rem(24);
+      line-height: rem(34.75);
+    }
+
     &.-main {
       padding-block-start: rem(10);
-      font-size: cal-clamp(24, 28);
-      line-height: cal-clamp(34.75, 40.32);
+      font-size: rem(24);
+      line-height: rem(34.75);
+
+       @include mq(md) {
+        font-size: rem(28);
+        line-height: rem(40.32);
+      }
     }
 }
 
 .p-price__head-price {
     margin-block-start: cal-clamp(11, 17);
-    font-size: cal-clamp(14, 20);
-    line-height: cal-clamp(20.27, 28.96);
+    font-size: rem(14);
+    line-height: rem(20.27);
     font-weight: 700;
     color: $font2-color;
 
+     @include mq(md) {
+      font-size: rem(20);
+      line-height: rem(28.96);
+    }
+
     & span {
       font-family: $font-family-ja;
-      font-size: cal-clamp(30, 36);
-      line-height: cal-clamp(43.44, 52.13);
+      font-size: rem(30);
+      line-height: rem(43.44);
+
+       @include mq(md) {
+        font-size: rem(36);
+        line-height: rem(52.13);
+      }
     }
 
     &.-main {
       margin-block-start: cal-clamp(1, 7);
-      font-size: cal-clamp(20, 26);
-      line-height: cal-clamp(28.96, 37.65);
+      font-size: rem(20);
+      line-height: rem(28.96);
+
+       @include mq(md) {
+        font-size: rem(26);
+        line-height: rem(37.65);
+      }
 
       & span {
         font-family: $font-family-ja;
-        font-size: cal-clamp(36, 42);
-        line-height: cal-clamp(52.13, 60.82);
+        font-size: rem(36);
+        line-height: rem(52.13);
+
+         @include mq(md) {
+          font-size: rem(42);
+          line-height: rem(60.82);
+        }
       }
     }
 }
@@ -98,11 +134,28 @@
   margin-block-start: cal-clamp(19, 28);
   padding-block: cal-clamp(13, 16);
   padding-inline: rem(19);
-  font-size: cal-clamp(16, 18);
-  line-height: cal-clamp(16, 18);
+  font-size: rem(16);
+  line-height: rem(16);
+  box-shadow: none;
 
-   @include mq(lg) {
+  &.__p {
+    color: $font2-color;
+    border: 2px solid $font2-color;
+    background: $primary-color;
+  }
+
+  @media(any-hover: hover) {
+    &:hover {
+      color: $primary-color;
+      border: 2px solid $primary-color;
+      background: $font2-color;
+    }
+  }
+
+   @include mq(md) {
     padding-inline: rem(45);
+    font-size: rem(18);
+    line-height: rem(18);
   }
 
   &.__w {
@@ -112,12 +165,54 @@
     @media(any-hover: hover) {
       &:hover {
         background: $font1-color;
-        border: 2px solid $font2-color;
+        // border: 2px solid $primary-color;
         color: $font2-color;
       }
     }
   }
 }
+
+
+.p-table__foot {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-block-start: cal-clamp(9, 16);
+  margin-inline: auto;
+  width: 727px;
+  @include mq(md) {
+    width: 1020px;
+ }
+}
+
+.p-table__foot-item {
+  width: 183.2px;
+
+  @include mq(md) {
+    width: 263.11px;
+  }
+}
+
+.p-table__foot-item>.p-price__btn {
+
+}
+
+.p-table__btn {
+
+}
+
+.__w {
+
+}
+
+.-main {
+
+}
+
+.__p {
+
+}
+
 
 
 

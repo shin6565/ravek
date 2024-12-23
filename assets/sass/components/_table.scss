@@ -1,18 +1,19 @@
 .c-table {
-  width: 727px;
+  width: 727.6px;
   margin-inline: auto;
+  border-spacing: 0;
 
-   @include mq(lg) {
+   @include mq(md) {
      width: 1020px;
   }
   }
 
 .c-table__row {
     display: grid;
-    grid-template-columns: 187px repeat(3, 180px);
+    grid-template-columns: 176px repeat(3, 183.2px);
     place-items: center;
 
-     @include mq(lg) {
+     @include mq(md) {
         grid-template-columns: 240px repeat(3, 260px);
     }
 
@@ -32,33 +33,42 @@
 
 
 
-
-.c-table__head-title {
-
-}
-
-.c-table__head-price {
-
-}
-
-
-.c-cta__btn {
-
-}
-
-
-
-.-main {
-
-}
-
-
-
 .c-table__side-head {
+  font-size: rem(14);
+  line-height: rem(14);
+
+  @include mq(md) {
+    font-size: rem(22);
+    line-height: rem(22);
+  }
 
 }
 
 .c-table__data {
+  font-size: rem(14);
+  line-height: rem(14);
+
+  @include mq(md) {
+    font-size: rem(18);
+    line-height: rem(18);
+  }
+
+  &.-main {
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: rem(18);
+  
+    @include mq(md) {
+      font-size: rem(24);
+      line-height: rem(18);
+    }
+  
+  }
 
 }
+
+
+
+
+
 
