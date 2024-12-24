@@ -22,6 +22,10 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
+    <!-- scroll-hint CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+    <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+
     <!-- jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
 </head>
@@ -84,6 +88,7 @@
                 <img loading="lazy" src="/assets/img/fv.webp" alt="働く女性のイラスト" width="515" height="515">
               </div>
             </div>
+          </div>
         </section>
         <section class="p-about">
           <div class="l-inner p-about__inner">
@@ -231,17 +236,13 @@
             <a href="/contact" class="c-btn p-cta__btn __p">無料でRavekを使ってみる</a>
           </div>
         </section>
-
-
-
-
         <section class="p-price">
           <div class="l-inner p-price__inner">
             <hgroup class="l-section__title">
               <p class="l-section__title-en">Price</p>
               <h2 class="l-section__title-ja">料金プラン</h2>
             </hgroup>
-            <div class="p-price__container">
+            <div class="p-price__container js-scrollable">
               <div class="p-price__head">
                 <div class="p-price__head-item">
                   <p class="p-price__head-title">ライト</p>
@@ -316,6 +317,31 @@
               </div>
             </div>
           </div>
+      </section>
+      <section class="p-faq">
+        <div class="l-inner p-faq__inner">
+          <hgroup class="l-section__title">
+            <p class="l-section__title-en">Question</p>
+            <h2 class="l-section__title-ja">よくある質問 </h2>
+          </hgroup>
+          <div class="p-faq__container">
+            <details class="p-faq__item js-details">
+              <summary class="js-summary">
+                <ul class="p-faq__question">
+                  <li class="p-faq__question-text">
+                    個人で稼ぐという目標を達成するために大事なことはなんですか？
+                  </li>
+                </ul>
+              </summary>
+              <div class="p-faq__content js-content">
+                <ul class="p-faq__answer">
+                  <li class="p-faq__answer-text">
+                    個人で稼ぐためには、まず自分の強みを理解し、それを活かしたサービスや商品を提供することが重要です。市場のニーズを調査し、競争相手との差別化を図ることで価値を高めましょう。また、自己管理と継続的な学習を怠らず、計画的に行動することが成功への鍵です。ネットワーキングやマーケティングも重要な要素であり、自分のブランドを築く努力を惜しまないことが大切です。
+                  </li>
+                </ul>
+              </div>
+            </details>
+        </div>
       </section>
 
 
