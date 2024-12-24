@@ -1,5 +1,6 @@
 .p-faq {
     padding-block: rem(60);
+    background: $accent3-color;
 }
 
 .p-faq__inner {
@@ -12,19 +13,17 @@
 }
 
 .p-faq__item {
-    padding-block-start: cal-clamp(10, 22);
-    padding-block-end: cal-clamp(8, 22);
-
-    background: $primary-color;
-    border-radius: 4px;
+  &:not(:first-child) {
+    margin-block-start: rem(24);
+  }
 }
 
 summary {
-    display: block;
-    &::-webkit-details-marker {
-      display: none;
-    }
-
+  display: block;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  
   @media(any-hover: hover) {
     &:hover {
       cursor: pointer;
@@ -33,13 +32,17 @@ summary {
 }
 
 .p-faq__question {
-
+    padding-inline-start: rem(15);
+    padding-block-start: cal-clamp(10, 22);
+    padding-block-end: cal-clamp(8, 22);
+    background: $primary-color;
+    border-radius: 4px;
 
 }
 
 .p-faq__question-text {
     position: relative;
-    padding-inline-start: cal-clamp(47, 56);
+    padding-inline-start: cal-clamp(37, 34);
     padding-inline-end: cal-clamp(10, 20);
     color: $font2-color;
     font-size: cal-clamp(16, 18);
@@ -49,26 +52,48 @@ summary {
     &::before {
         content: 'Q';
         position: absolute;
-        top: 50%;
-        translate: 0 -50%;
+        top: 0;
         left: 0;
-        font-size: 32px;
-        line-height: 24px;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 22px;
       }
 
 }
 
 .p-faq__content {
-
+  margin-block-start: cal-clamp(16, 14);
 }
 
 
 .p-faq__answer {
   display: block;
+  padding-inline-start: cal-clamp(15, 25);
+  padding-block-start: cal-clamp(12, 22);
+  padding-block-end: cal-clamp(12, 22);
+  background: $sub2-color;
+  border-radius: 4px;
 
 }
 
-.p-faq__answer-text {}
+.p-faq__answer-text {
+  position: relative;
+  padding-inline-start: cal-clamp(28.96, 31);
+  padding-inline-end: cal-clamp(10, 20);
+  color: $font1-color;
+  font-size: cal-clamp(16, 18);
+  line-height: cal-clamp(25.6, 32.4);
+
+  &::before {
+      content: 'A';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 22px;
+    }
+}
 
 
 
