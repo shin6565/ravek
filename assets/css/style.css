@@ -1119,6 +1119,7 @@ summary::-webkit-details-marker {
   -webkit-margin-before: clamp(0rem, -17.3793103448rem + 36.2068965517vw, 5.25rem);
           margin-block-start: clamp(0rem, -17.3793103448rem + 36.2068965517vw, 5.25rem);
   line-height: clamp(3rem, -5.044137931rem + 16.7586206897vw, 5.43rem);
+  white-space: nowrap;
   grid-area: title;
 }
 
@@ -1155,13 +1156,14 @@ summary::-webkit-details-marker {
 }
 
 .c-btn.p-fv__btn {
-  width: 250px;
   padding-inline: 3.1875rem;
   border: none;
 }
 @media (min-width: 768px) {
   .c-btn.p-fv__btn {
+    width: 250px;
     margin-inline: 0;
+    padding-inline: 1.5rem;
   }
 }
 
