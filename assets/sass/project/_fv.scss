@@ -33,6 +33,7 @@
     font-size: cal-clamp(30, 60);
     margin-block-start: cal-clamp(0, 84);
     line-height: cal-clamp(48, 86.88);
+    white-space: nowrap;
     grid-area: title;
 }
 
@@ -61,12 +62,13 @@
 }
 
 .c-btn.p-fv__btn {
-    width: 250px;
     padding-inline: rem(51);
     border: none;
-
-     @include mq(md) {
+    
+    @include mq(md) {
+        width: 250px;
         margin-inline: 0;
+        padding-inline: rem(24);
     }
 }
 
