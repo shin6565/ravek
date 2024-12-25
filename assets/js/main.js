@@ -195,6 +195,7 @@ const IS_OPENED_CLASS = "is-opened";
 details.forEach((element) => {
   const summary = element.querySelector(".js-summary");
   const content = element.querySelector(".js-content");
+  
 
   summary.addEventListener("click", (event) => {
     // デフォルトの挙動を無効化

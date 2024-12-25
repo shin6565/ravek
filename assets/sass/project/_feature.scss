@@ -34,12 +34,13 @@
         justify-content: space-between;
 
         &:nth-of-type(even) {
-            margin-block-start: rem(153);
+            margin-block-start: cal-clamp(80, 153);
             flex-direction: row;
         }
 
         &:nth-of-type(3) {
-            margin-block-start: rem(-80);
+            margin-block-start: cal-clamp(80, -80);
+
         }
 
     }

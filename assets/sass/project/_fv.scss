@@ -6,6 +6,13 @@
 
 .p-fv__inner {
     padding-block-start: cal-clamp(60, 33);
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "text"
+    "img"
+    "cta";
+    grid-template-columns: 1fr;
 
      @include mq(md) {
         display: flex;
@@ -14,27 +21,29 @@
 }
 
 .p-fv__container {
+    display: contents;
 
+    
+    @include mq(md) {
+        display: block;
+    }
 }
 
 .p-fv__title {
     font-size: cal-clamp(30, 60);
     margin-block-start: cal-clamp(0, 84);
     line-height: cal-clamp(48, 86.88);
+    grid-area: title;
 }
 
 .p-fv__text {
     margin-block-start: rem(16);
     line-height: cal-clamp(25.6, 32.4);
     font-size: cal-clamp(16, 18);
+    grid-area: text;
 
 }
 
-.p-fv__img-sp {
-    max-width: 515px;
-    width: 100%;
-    height: auto;
-}
 
 
 .p-fv__cta {
@@ -43,6 +52,7 @@
     row-gap: 32px;
     text-align: center;
     margin-block-start: cal-clamp(0, 33);
+    grid-area: cta;
 
      @include mq(md) {
         flex-direction: row;
@@ -51,6 +61,7 @@
 }
 
 .c-btn.p-fv__btn {
+    width: 250px;
     padding-inline: rem(51);
     border: none;
 
@@ -60,10 +71,20 @@
 }
 
 
-.p-fv__img-pc {
+.p-fv__img {
+    display: contents;
     max-width: 515px;
     width: 100%;
     height: auto;
+    grid-area: img;
+
+    & img {
+        height: auto;
+    }
+
+     @include mq(md) {
+        display: block;
+    }
 }
 
 
