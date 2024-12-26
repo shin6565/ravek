@@ -16,8 +16,11 @@
 
 .l-header__logo {
     display: block;
-    width: 71px;
-    height: 24px;
+
+    & img {
+        width: 71px;
+        height: 24px;
+    }
 
      @include mq(md) {
         width: 83px;

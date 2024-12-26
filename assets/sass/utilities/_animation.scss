@@ -23,13 +23,13 @@
 .animated__slideIn--left {
   // before (出現前)
   opacity: 0;
-  translate: -1000px 0;
-  transition: opacity 0.5s ease, translate 0.5s ease;
-
+  translate: 0 40px;
+  transition: opacity 2s ease, translate 1.5s ease;
+  
   // スマホの時はフェードイン
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     opacity: 0;
-    translate: 0 40px;
+    translate: -1000px 0;
   }
 
   // after (出現後)
@@ -43,13 +43,13 @@
 .animated__slideIn--right {
   // before (出現前)
   opacity: 0;
-  translate: 1000px 0;
-  transition: opacity 0.5s ease, translate 0.5s ease;
-
+  transition: opacity 3s ease, translate 1.5s ease;
+  translate: 0 40px;
+  
   // スマホの時はフェードイン
-  @media (max-width: 800px) {
+  @media (min-width: 800px) {
     opacity: 0;
-    translate: 0 40px;
+    translate: 1000px 0;
   }
 
   // after (出現後)
