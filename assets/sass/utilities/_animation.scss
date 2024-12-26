@@ -3,7 +3,9 @@
     // before (出現前)
     opacity: 0;
     translate: 0 40px;
-    transition: opacity 0.3s ease, translate 0.3s ease;
+    transition: 
+      opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1),
+      translate 0.6s cubic-bezier(0.33, 1, 0.68, 1);
   
     // after (出現後)
     &.js-show {
@@ -12,30 +14,47 @@
     }
   }
 
-  .animated__fadeInStagger {
-    // before (出現前)
+// translateのスタート位置が外にはみ出るので overflow: hiddenをつける
+.service {
+  overflow: hidden;
+}
+
+// 左からスライドするアニメーション
+.animated__slideIn--left {
+  // before (出現前)
+  opacity: 0;
+  translate: -1000px 0;
+  transition: opacity 0.5s ease, translate 0.5s ease;
+
+  // スマホの時はフェードイン
+  @media (max-width: 800px) {
     opacity: 0;
     translate: 0 40px;
-    transition: opacity 0.3s ease, translate 0.3s ease;
-  
-    // after (出現後)
-    &.js-show {
-      opacity: 1;
-      translate: 0 0;
-    }
   }
 
-  
-
-//   右から左へのアニメーション
-//片側から出現
-.animated__clipView {
-    // before (出現前)
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path 2s ease;
-    
-    // after (出現後)
-    &.js-show {
-      clip-path: inset(0 0 0 0);
-    }
+  // after (出現後)
+  &.js-show {
+    opacity: 1;
+    translate: 0;
   }
+}
+
+// 右からスライドするアニメーション
+.animated__slideIn--right {
+  // before (出現前)
+  opacity: 0;
+  translate: 1000px 0;
+  transition: opacity 0.5s ease, translate 0.5s ease;
+
+  // スマホの時はフェードイン
+  @media (max-width: 800px) {
+    opacity: 0;
+    translate: 0 40px;
+  }
+
+  // after (出現後)
+  &.js-show {
+    opacity: 1;
+    translate: 0;
+  }
+}
