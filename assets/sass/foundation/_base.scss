@@ -7,7 +7,7 @@ body {
     color: $font1-color;
     background: $sub2-color;
     font-family: $font-family-en, $font-family-ja, serif;
-
+    scroll-behavior: smooth;
 }
 
 img {
