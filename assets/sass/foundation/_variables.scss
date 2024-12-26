@@ -21,3 +21,13 @@ $font-family-en: "Lato";
 # Inner
 ===========================================================================*/
 $inner-width: min(calc( 1187 + 20 * 2), 100%);
+
+
+/*----------------------------------
+  #スムーススクロール
+-----------------------------------*/
+@media (prefers-reduced-motion: no-preference) { /* ここを追加 */
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
