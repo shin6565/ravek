@@ -19,7 +19,7 @@ window.addEventListener('load',function(){
 	slideInLeftItems.forEach(item => {
 	  ScrollTrigger.create({
 	    trigger: item,
-	    start: "top 70%", // 要素が上部から70%の位置で発火
+	    start: "top 80%", // 要素が上部から80%の位置で発火
 	    onEnter: () => {
 	      // 要素内に入ったら、js-showクラスをつける
 	      item.classList.add("js-show");
@@ -31,7 +31,7 @@ window.addEventListener('load',function(){
 	slideInRightItems.forEach(item => {
 	  ScrollTrigger.create({
 	    trigger: item,
-	    start: "top 70%", // 要素が上部から70%の位置で発火
+	    start: "top 80%", // 要素が上部から80%の位置で発火
 	    onEnter: () => {
 	      // 要素内に入ったら、js-showクラスをつける
 	      item.classList.add("js-show");
