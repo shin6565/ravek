@@ -47,8 +47,10 @@
 }
 
 .p-feature__img {
+    position: relative;
     padding-inline: cal-clamp(47, 0);
     translate: 0 75px;
+    z-index: 10;
 
     & img {
         height: auto;
@@ -57,7 +59,7 @@
      @include mq(md) {
         max-width: 520px;
         width: 100%;
-        translate: -68px 0;
+        translate: -108px 0;
     }
 
     &.-reverse {
@@ -76,6 +78,7 @@
     padding-block-end: rem(40);
     padding-inline: rem(20);
     border-radius: 16px;
+
 
      @include mq(md) {
         max-width: calc( 742 / 1235 * 100%);
