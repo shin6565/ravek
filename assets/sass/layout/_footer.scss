@@ -46,6 +46,12 @@
     }
 
     & li {
+        transition: ease 0.4s;
+        @media(any-hover: hover) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
 
         & a {
             font-size: rem(14);
@@ -88,8 +94,9 @@
     margin-block-start: rem(12);
     justify-content: center;
     gap: rem(18);
-
+    
     & a {
+        transition: ease 0.4s;
         @media(any-hover: hover) {
             &:hover {
                 opacity: 0.7;

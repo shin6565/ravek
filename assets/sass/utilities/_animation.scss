@@ -4,8 +4,8 @@
     opacity: 0;
     translate: 0 40px;
     transition: 
-      opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1),
-      translate 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+      opacity 0.6s ease,
+      translate 0.6s ease;
   
     // after (出現後)
     &.js-show {
@@ -14,10 +14,7 @@
     }
   }
 
-// translateのスタート位置が外にはみ出るので overflow: hiddenをつける
-.service {
-  overflow: hidden;
-}
+
 
 // 左からスライドするアニメーション
 .animated__slideIn--left {
@@ -43,7 +40,7 @@
 .animated__slideIn--right {
   // before (出現前)
   opacity: 0;
-  transition: opacity 3s ease, translate 1.5s ease;
+  transition: opacity 2s ease, translate 1.5s ease;
   translate: 0 40px;
   
   // スマホの時はフェードイン
