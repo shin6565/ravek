@@ -11,12 +11,13 @@
     @include mq(md) {
          max-width: calc(1235 / 1440 * 100%);
     }
+
 }
 
 
 
 .p-feature__container {
-    margin-block-start: cal-clamp(-25, 100);
+    margin-block-start: cal-clamp(40, 100);
 
     
     @include mq(md) {
@@ -69,6 +70,9 @@
         }
     }
 
+    @media (520px <= width <= 1050px) {
+        translate: -50px 0;
+    }
 
 }
 

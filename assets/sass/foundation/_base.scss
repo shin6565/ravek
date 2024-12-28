@@ -1,13 +1,16 @@
 /*===========================================================================
 # common - 全体に共通するスタイル
 ===========================================================================*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-size: 16px;
     font-weight: 400;
     color: $font1-color;
     background: $sub2-color;
     font-family: $font-family-en, $font-family-ja, serif;
-    scroll-behavior: smooth;
 }
 
 img {

@@ -6,6 +6,12 @@
 
 .p-flow__inner {
 
+    @media (600px <= width <= 767px) {
+        padding-inline: rem(100);
+    }
+    @media (520px <= width <= 599px) {
+        padding-inline: rem(60);
+    }
 }
 
 .p-flow__container {

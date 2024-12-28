@@ -33,8 +33,12 @@
     font-size: cal-clamp(30, 60);
     margin-block-start: cal-clamp(0, 84);
     line-height: cal-clamp(48, 86.88);
-    white-space: nowrap;
+    white-space: normal;
     grid-area: title;
+
+     @include mq(md) {
+        white-space: nowrap;
+    }
 }
 
 .p-fv__text {
@@ -52,10 +56,11 @@
     flex-direction: column;
     row-gap: 32px;
     text-align: center;
-    margin-block-start: cal-clamp(0, 33);
+    margin-block-start: rem(0);
     grid-area: cta;
 
      @include mq(md) {
+        margin-block-start: rem(33);
         flex-direction: row;
         gap: 37px;
     }
@@ -93,6 +98,11 @@
         width: 250px;
         margin-inline: 0;
         padding-inline: rem(24);
+    }
+
+    @media screen and (max-width: 350px) {
+        padding-inline: rem(32);
+        
     }
 }
 

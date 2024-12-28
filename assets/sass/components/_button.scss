@@ -51,5 +51,10 @@
             border-right: 2px solid $accent1-color;
         }
     }
+
+    @media screen and (max-width: 350px) {
+        padding-inline: rem(32);
+        
+    }
 }
 
